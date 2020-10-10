@@ -504,6 +504,8 @@ class Text extends BaseVisualElment {
     this.horizontalAlignment = new Alignment(AlignmentValue.Start);
 
     this.lines = 1;
+    this.fontWidth = "";
+    this.fontHeight = "";
   }
 
   characterMap() {
@@ -570,7 +572,7 @@ class Text extends BaseVisualElment {
     }
 
     zpl += '^FO' + Math.round(position.left) + ',' + Math.round(position.top);
-    zpl += '^A' + this.fontFamily.value + ',' + 'N' + ',,' + '\n';
+    zpl += '^A' + this.fontFamily.value + ',' + 'N' + ',' + this.fontHeight + ',' + this.fontWidth + '\n';
     zpl += '^FB' + Math.round(position.width) + ',' + this.lines + ',0,' + horizontalAlignment + ',0\n';
     zpl += '^FD' + this.text + '^FS\n';
 

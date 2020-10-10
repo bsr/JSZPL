@@ -11,5 +11,6 @@ label.content.push(text);
 text.fontFamily = new jszpl.FontFamily(jszpl.FontFamilyName.D);
 text.text = 'Hello World!';
 text.lines = 2;
+text.fontHeight = 15;
 
 console.log(label.generateZPL());
