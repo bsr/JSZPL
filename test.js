@@ -10,5 +10,6 @@ var text = new jszpl.Text();
 label.content.push(text);
 text.fontFamily = new jszpl.FontFamily(jszpl.FontFamilyName.D);
 text.text = 'Hello World!';
+text.lines = 2;
 
 console.log(label.generateZPL());

@@ -502,6 +502,8 @@ class Text extends BaseVisualElment {
     // this.rotation = Rotation.Normal;
     this.verticalAlignment = new Alignment(AlignmentValue.Start);
     this.horizontalAlignment = new Alignment(AlignmentValue.Start);
+
+    this.lines = 1;
   }
 
   characterMap() {
@@ -569,7 +571,7 @@ class Text extends BaseVisualElment {
 
     zpl += '^FO' + Math.round(position.left) + ',' + Math.round(position.top);
     zpl += '^A' + this.fontFamily.value + ',' + 'N' + ',,' + '\n';
-    zpl += '^FB' + Math.round(position.width) + ',1,0,' + horizontalAlignment + ',0\n';
+    zpl += '^FB' + Math.round(position.width) + ',' + this.lines + ',0,' + horizontalAlignment + ',0\n';
     zpl += '^FD' + this.text + '^FS\n';
 
     if (this.invert) {
